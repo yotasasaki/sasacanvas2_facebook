@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta property="og:title" content="Yota Sasaki SASACANVAS" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="SASACANVAS" />
+<meta property="fb:admins" content="" />
+
+<title>SASACANVAS</title>
+
+<link rel="stylesheet" href="css/htmlmobilify.css">
+<link rel="stylesheet" href="jquery-ui-1.8.21.custom.css">
+<link rel="stylesheet" href="js/farbtastic/farbtastic.css" type="text/css" />
+<link rel="stylesheet" href="css/sasacanvas.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="js/farbtastic/farbtastic.js"></script>
+<script type="text/javascript" src="js/rgb/rgbcolor.js"></script>
+
+<script type="text/javascript">
+$(document).ready(
+  function(){
+    $("img.stationery").hover(function(){
+       $(this).fadeTo("normal", 0.6); // マウスオーバー時にnormal速度で、透明度を100%にする
+    },function(){
+       $(this).fadeTo("normal", 1.0); // マウスアウト時にnormal速度で、透明度を60%に戻す
+    });
+  });
+</script>
+
+<script type="text/javascript" src="js/sasacanvas.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+        <div id="wrapper1">
+
+        <!--Canvas-->
+            <li>
+                <canvas id="thecanvas" width="850" height="400">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
+            </li>
+            <!--<ul>
+            <li style="background-color:#000"></li>
+            <li style="background-color:#f00"></li>
+            <li style="background-color:#0f0"></li>
+            <li style="background-color:#00f"></li>
+            <li style="background-color:#ff0"></li>
+            </ul>-->
+                    <table align='center' border="0px">
+                        <tr>
+                            <td id="inp_5" class="buttons">
+                                <span style='display:none'><input id="brush3" type="radio" name="brush"></span><label for='brush3'><img class="stationery" src='images/spray.jpg' height="150px"></label>                          
+                            </td>
+                            <td id="inp_2" class="buttons">
+                                <span style='display:none'><input id="brush4" type="radio" name="brush"></span><label for='brush4'><img class="stationery" src='images/waterpaint.jpg' height="150px"></label>
+                            </td>
+                            <td id="inp_3" class="buttons">
+                                <span style='display:none'><input id="miter" type="radio" name="brush"></span><label for='miter'><img class="stationery" src='images/oilpaint.jpg' height="150px"></label>
+                            </td>
+                            <td id="inp_4" class="buttons">
+                                <span style='display:none'><input id="brush2" type="radio" name="brush" checked="checked"></span><label for='brush2'><img class="stationery" src='images/marker.jpg' height="150px"></label>
+                            </td>
+                            <td id="inp_6" class="buttons">
+                                <span style='display:none'><input id="eraser" type="radio" name="brush"></span><label for='eraser'><img class="stationery" src='images/eraser.jpg' height="150px"></label>
+                            </td>
+                            <td id="inp_1" class="buttons">
+                                <span style='display:none'><input id="brush1" type="radio" name="brush"></span><label for='brush1'><img class="stationery" src='images/pen.jpg' height="150px"></label>
+                            </td>
+                            <td id="inp_7" class="buttons">
+                                <span style='display:none'><input id="spuit" type="radio" name="brush"></span><label for='spuit'><img class="stationery" src='images/picker.jpg' height="150px"></label>
+                            </td>
+                            <td>
+                                <span style='display:none'><input type="button" id="undo" /></span><label for='undo'><img class="stationery" src='images/undo.jpg' height="150px"></label>
+                            </td>
+                            <td>    
+                                <span style='display:none'><input type="button" id="clear" /></span><label for='clear'><img class="stationery" src='images/clear.jpg' height="150px"></label>
+                            </td>
+                        </tr>
+                    </table>
+                        <!--<form><input type="text" id="color" name="color" value="#123456" /></form>
+                         <div id="colorpicker"></div>-->
+                        <!--<input type="text" id="color" name="color" value="#123456" />
+                        <div id="colorpicker"></div>-->
+        </div><!--wrapper1-->
+        <div id="wrapper2">
+            <div><img id="logo" src="images/logo.jpg"></div>
+            <li>
+                <div id="slider" ></div>
+                
+                <div id="slider2"></div>
+            </li>
+            <div id="colorpicker-div">
+                    <form action="">
+                        <div class="form-item"><label for="color"></label><input type="text" id="color" name="color" value="#45fd12" /></div>
+                        <div id="picker"></div>
+                    </form>
+            </div>
+                <div id="b_1" class="buttons">                
+                    <form id="postfb" action="index.php" method="POST" name="sendform">
+                        <span style='display:none'><input type="button" id="save" /></span><label for='save'><img class="stationery" src='images/postfb.jpg' height="150px"></label>
+                        <input type="hidden" name="paintdata" value="" />
+                        <input type="hidden" name="confirm" value="confirm" />
+                    </form>
+                            </div>                             
+
+        </div><!--wrapper2-->
+</div><!--wrapper-->
+</body>
+</html>
