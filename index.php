@@ -1,10 +1,11 @@
 <?php
 
 	require_once 'fb/facebook.php';
+        require_onve 'config.php';        
 
 	$facebook = new Facebook(array(
-			'appId'  => '', //AppID
-			'secret' => '', //secret
+			'appId'  => APP_ID,
+			'secret' => APP_SECRET,
 			'fileupload'=>true
 	));
 	
