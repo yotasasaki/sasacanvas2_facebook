@@ -1,7 +1,7 @@
 <?php
 
 	require_once 'fb/facebook.php';
-        require_onve 'config.php';        
+        require_once 'config.php';        
 
 	$facebook = new Facebook(array(
 			'appId'  => APP_ID,
